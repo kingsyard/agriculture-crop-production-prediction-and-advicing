@@ -1,15 +1,14 @@
 
-import pymysql
-pymysql.install_as_MySQLdb()
+
 import numpy as np;
 import pandas as pd;
-#import seaborn as sns;
+
 import matplotlib.pyplot  as plt;
 from sklearn.model_selection  import train_test_split
 from sklearn.linear_model  import LogisticRegression
 from sklearn.metrics import accuracy_score,confusion_matrix
 import pickle
-import MySQLdb
+
 
 data=pd.read_csv('apy.csv',na_values='=')
 
@@ -23,7 +22,7 @@ data1.info()
 data1.isnull().sum()
 data1.columns
 data1['Crop'].describe()
-print(data1.describe(include="O"))
+
 data1['Crop'].value_counts()
 data1['Season'].value_counts()
 
@@ -52,7 +51,7 @@ data2.isnull().sum()
 #missing2=data2[data2.isnull().any(axis=1)]
 data2=data2.dropna(axis=0)
 correlation=data2.corr()
-print(correlation)
+
 correlation=data2.corr()
 data2.columns
 # production_area=pd.crosstab(index=data2['Area'],columns=data2['Production'])
@@ -125,7 +124,7 @@ data2['Production']=data2['Production'].astype('int')
 
 data21=data.head(10)
 data31=data21
-print(data31)
+
 
 
 
@@ -185,8 +184,6 @@ db = firebase.database()
 
 
 
-import pymysql
-pymysql.install_as_MySQLdb()
 
 
 import numpy as np
